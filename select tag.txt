@@ -1,0 +1,123 @@
+<!-- <?php
+                    $query ="SELECT * FROM tbl_firm;";
+                    $result = $abc->query($query);
+                    if($result->num_rows> 0){
+                    $options= mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    }
+                    ?>
+                    <select name="firm_name" class="form-select">
+                    <option>Select Firm</option>
+                    <?php 
+                    foreach ($options as $option) {
+                    ?>
+                        <option><?php echo $option['firm_name']; ?> </option>
+                        <?php 
+                        }
+                    ?> 
+                    </select>
+                    </div>
+                </div> -->
+
+
+tbl_chalan
+
+
+
+CREATE TABLE tbl_chalan(
+id int PRIMARY KEY AUTO_INCREMENT,
+firm_name varchar(150) not null,
+gstin varchar(24),
+address varchar(250),
+broker_name varchar(50),
+quality_name varchar(50),
+rate float NOT NULL,
+dhara int default 0,
+genrate date,
+no_1 float DEFAULT 0,
+no_2 float DEFAULT 0,
+no_3 float DEFAULT 0,
+no_4 float DEFAULT 0,
+no_5 float DEFAULT 0,
+no_6 float DEFAULT 0,
+no_7 float DEFAULT 0,
+no_8 float DEFAULT 0,
+no_9 float DEFAULT 0,
+no_10 float DEFAULT 0,
+no_11 float DEFAULT 0,
+no_12 float DEFAULT 0,
+no_13 float DEFAULT 0,
+no_14 float DEFAULT 0,
+no_15 float DEFAULT 0,
+no_16 float DEFAULT 0,
+no_17 float DEFAULT 0,
+no_18 float DEFAULT 0,
+no_19 float DEFAULT 0,
+no_20 float DEFAULT 0,
+no_21 float DEFAULT 0,
+no_22 float DEFAULT 0,
+no_23 float DEFAULT 0,
+no_24 float DEFAULT 0,
+no_25 float DEFAULT 0,
+no_26 float DEFAULT 0,
+no_27 float DEFAULT 0,
+no_28 float DEFAULT 0,
+no_29 float DEFAULT 0,
+no_30 float DEFAULT 0,
+no_31 float DEFAULT 0,
+no_32 float DEFAULT 0,
+no_33 float DEFAULT 0,
+no_34 float DEFAULT 0,
+no_35 float DEFAULT 0,
+no_36 float DEFAULT 0,
+no_37 float DEFAULT 0,
+no_38 float DEFAULT 0,
+no_39 float DEFAULT 0,
+no_40 float DEFAULT 0,
+no_41 float DEFAULT 0,
+no_42 float DEFAULT 0,
+no_43 float DEFAULT 0,
+no_44 float DEFAULT 0,
+no_45 float DEFAULT 0,
+no_46 float DEFAULT 0,
+no_47 float DEFAULT 0,
+no_48 float DEFAULT 0,
+no_49 float DEFAULT 0,
+no_50 float DEFAULT 0,
+no_51 float DEFAULT 0,
+no_52 float DEFAULT 0,
+no_53 float DEFAULT 0,
+no_54 float DEFAULT 0,
+no_55 float DEFAULT 0,
+no_56 float DEFAULT 0,
+no_57 float DEFAULT 0,
+no_58 float DEFAULT 0,
+no_59 float DEFAULT 0,
+no_60 float DEFAULT 0,
+no_61 float DEFAULT 0,
+no_62 float DEFAULT 0,
+no_63 float DEFAULT 0,
+no_64 float DEFAULT 0,
+no_65 float DEFAULT 0,
+no_66 float DEFAULT 0,
+no_67 float DEFAULT 0,
+no_68 float DEFAULT 0,
+no_69 float DEFAULT 0,
+no_70 float DEFAULT 0,
+no_71 float DEFAULT 0,
+no_72 float DEFAULT 0,
+lot_1 float default (no_1+no_2+no_3+no_4+no_5+no_6+no_7+no_8+no_9+no_10+no_11+no_12),
+lot_2 float default (no_13+no_14+no_15+no_16+no_17+no_18+no_19+no_20+no_21+no_22+no_23+no_24),
+lot_3 float default (no_25+no_26+no_27+no_28+no_29+no_30+no_31+no_32+no_33+no_34+no_35+no_36),
+lot_4 float default (no_37+no_38+no_39+no_40+no_41+no_42+no_43+no_44+no_45+no_46+no_47+no_48),
+lot_5 float default (no_49+no_50+no_51+no_52+no_53+no_54+no_55+no_56+no_57+no_58+no_59+no_60),
+lot_6 float default (no_61+no_62+no_63+no_64+no_65+no_66+no_67+no_68+no_69+no_70+no_71+no_72),
+total_meter float DEFAULT (lot_1+lot_2+lot_3+lot_4+lot_5+lot_6),
+total_amount float DEFAULT (total_meter*rate));
+
+
+join 
+
+
+
+SELECT c.*,f.* FROM tbl_chalan c INNER JOIN tbl_firm f ON c.firm_name= f.firm_name;
+no_1 ='$no_1 ',no_2 ='$no_2 ',no_3 ='$no_3 ',no_4 ='$no_4 ',no_5 ='$no_5,no_6 ='$no_6 ',no_7 ='$no_7',no_8 ='$no_8',no_9 ='$no_9 ',no_10 ='$no_10 ',no_11 ='$no_11 ',no_12 ='$no_12 ',no_13 ='$no_13 ',no_ 14 ='$no_ 14 ',no_15 ='$no_15 ',no_16 ='$no_16 ',no_17 ='$no_17 ',no_18 ='$no_18 ',no_19 ='$no_19 ',no_20 ='$no_20 ',no_21 ='$no_21' ',no_22 ='$no_22 ',no_23 ='$no_23 ',no_24 ='$no_24 ',no_25 ='$no_25 ',no_26 ='$no_26 ',no_27 ='$no_27 ',no_28 ='$no_28 ',no_29 ='$no_29 ',no_30 ='$no_30 ',no_31 ='$no_31' ,no_32 ='$no_32 ',no_33 ='$no_33 ',no_34 ='$no_34 ',no_35 ='$no_35 ',no_36 ='$no_36 ',no_37 ='$no_37 ',no_38 ='$no_38 ',no_39 ='$no_39 ',no_40 ='$no_40 ',no_41 ='$no_41' ,no_42 ='$no_42 ',no_43 ='$no_43 ',no_44 ='$no_44 ',no_45 ='$no_45 ',no_46 ='$no_46 ',no_47 ='$no_47 ',no_48 ='$no_48 ',no_49 ='$no_49 ',no_50 ='$no_50 ',no_51 ='$no_51' ,no_52 ='$no_52 ',no_53 ='$no_53 ',no_54 ='$no_54 ',no_55 ='$no_55 ',no_56 ='$no_56 ',no_57 ='$no_57 ',no_58 ='$no_58 ',no_59 ='$no_59 ',no_60 ='$no_60 ',no_61 ='$no_61 ',no_62 ='$no_62 ',no_63 ='$no_63 ',no_64 ='$no_64 ',no_65 ='$no_65 ',no_66 ='$no_66 ',no_67 ='$no_67 ',no_68 ='$no_68 ',no_69 ='$no_69 ',no_70 ='$no_70 ',no_71 ='$no_71 ',no_72 ='$no_72 '
